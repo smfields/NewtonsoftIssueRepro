@@ -1,0 +1,15 @@
+﻿@page "/"
+@using Shared
+
+<h1>@Instance?.MyProperty</h1>
+
+@code {
+
+    public IMyInterface? Instance { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        Instance = InstanceCreator.CreateInstance();
+    }
+
+}
